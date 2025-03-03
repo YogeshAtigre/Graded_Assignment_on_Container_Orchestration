@@ -1,0 +1,21 @@
+backend:
+  name: backend
+  image: backend
+  imagePullPolicy: Never
+  port: 5000
+  replicas: 1
+
+frontend:
+  name: frontend
+  image: frontend
+  imagePullPolicy: Never
+  port: 3000
+  replicas: 1
+
+mongodb:
+  name: mongodb
+  image: mongo:latest
+  port: 27017
+
+service:
+  type: ClusterIP  # Change to NodePort if necessary
